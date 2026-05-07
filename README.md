@@ -12,19 +12,7 @@ Eliminar productos
 
 Además, se implementan validaciones sobre nombre, precio y stock para garantizar integridad de datos.
 
-Estructura del Proyecto
-src
- ├── main
- │   └── java
- │       └── com.universidad.productos_service
- │           ├── controller
- │           ├── domain
- │           ├── repository
- │           └── service
- │
- └── test
-     └── java
-         └── com.universidad.productos_service.service
+
 Funcionalidades
 Crear producto
 
