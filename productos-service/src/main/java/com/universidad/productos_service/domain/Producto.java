@@ -1,15 +1,9 @@
 package com.universidad.productos_service.domain;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "productos")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Producto {
 
     @Id
@@ -24,4 +18,50 @@ public class Producto {
 
     @Column(nullable = false)
     private Integer stock;
+
+    // CONSTRUCTOR VACÍO
+    public Producto() {
+    }
+
+    // CONSTRUCTOR COMPLETO
+    public Producto(Long id, String nombre, Double precio, Integer stock) {
+        this.id = id;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+    }
+
+    // GETTERS Y SETTERS
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Double precio) {
+        this.precio = precio;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
+    }
 }
